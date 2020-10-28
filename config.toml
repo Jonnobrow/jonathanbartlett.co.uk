@@ -1,0 +1,20 @@
+baseURL = "https://blog.jonnobrow.co.uk"
+title = "Jonnobrow's Musings"
+theme = "etch"
+languageCode = "en-GB"
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  description = "The meditations of a Computer Scientist, Nerd and Baker"
+  copyright = "Copyright © 2020 Jonathan Bartlett"
+  dark = "auto"
+  highlight = true
+
+[permalinks]
+  posts = "/:title/"
+
+[markup.goldmark.renderer]
+  # Allows HTML in Markdown
+  unsafe = true
