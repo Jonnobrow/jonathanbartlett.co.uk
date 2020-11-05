@@ -5,7 +5,7 @@ date = 2020-10-28
 draft = false
 +++
 
-As users of Emacs and Arch linux will be aware, you can't simply perfect your setup.
+As users of Emacs[^fn:1] and Arch linux[^fn:2] will be aware, you can't simply perfect your setup.
 There is almost always something that needs tweaking, or something new a like-minded
 FOSS-head is working on that you want to try instead. This is all good fun until you
 reach the point where it all feels a bit excessive and overly specific to one tool
@@ -17,35 +17,35 @@ my journey to this point and some thoughts on the issue.
 
 ## From `vim` to `VimWiki` {#from-vim-to-vimwiki}
 
-When I first switched from ~~Windows~~ to Linux I started using **vim** to take notes.
+When I first switched from ~~Windows~~ to Linux I started using vim to take notes.
 They were simple and written in Markdown. It was very pure and frankly I do miss the
-simplicity of it. **vim** is very lightweight and this approach required little to no
+simplicity of it. vim is very lightweight and this approach required little to no
 plugins to be effective.
 
 However as my notes started to grow in quantity and the complexity of each note
 evolved (I wanted LaTeX maths and code snippets), I started to look for something
-a little bit more. Enter **VimWiki**, a "Personal Wiki for Vim".
+a little bit more. Enter VimWiki&nbsp;[^fn:3] , a "Personal Wiki for Vim".
 
-**VimWiki** lets you organise your notes and thoughts into a more structure knowledge base
+VimWiki lets you organise your notes and thoughts into a more structure knowledge base
 and this worked for me. I could create different files for everything and navigate
 through a file structure I have defined in my markup. I could also maintain to-do lists
 and write diary entries.
 
-Sadly, **VimWiki** uses a custom markup language, and although Markdown is supported,
+Sadly, VimWiki uses a custom markup language, and although Markdown is supported,
 I always felt like it just wasn't quite right. So once again I set out to find something
-a little bit more. It wasn't hard to find **Emacs**, but I wasn't ready for that yet so
-I kept on with **VimWiki** until the summer, when I had far too much time on my hands and
-took the plunge into **Spacemacs**.
+a little bit more. It wasn't hard to find Emacs, but I wasn't ready for that yet so
+I kept on with VimWiki until the summer, when I had far too much time on my hands and
+took the plunge into Spacemacs&nbsp;[^fn:4].
 
 
 ## Slowly getting more EVIL (The Spacemacs Era) {#slowly-getting-more-evil--the-spacemacs-era}
 
-The transition from **vim** to **Emacs** wasn't particularly hard for me, EVIL mode and some
-of the easy beginner friendly features of **Spacemacs** like layers made it a smooth
+The transition from vim to Emacs wasn't particularly hard for me. EVIL[^fn:5]  mode and some
+of the easy beginner friendly features of Spacemacs like layers made it a smooth
 transition. I was also willing to sink time into it because I had read about the supposed
-benefits of **org-mode** and wasn't going to miss out on the opportunity.
+benefits of org-mode and wasn't going to miss out on the opportunity.
 
-**Spacemacs** had the potential to be so much more that **vim** but I didn't want to overdo it and
+Spacemacs had the potential to be so much more that vim but I didn't want to overdo it and
 reach the stage where the quote "a great operating system, lacking only a decent editor"
 applied to me. I made myself somewhat of a promise that I would use it only for things I
 could do in something like VS-Code or Atom, that included:
@@ -64,12 +64,12 @@ a dominant portion of my week.
 
 ## `org-mode` - your life in plain text {#org-mode-your-life-in-plain-text}
 
-First off, I highly recommend org-mode, it is flexible, simple and versatile and offers something
+First off, I highly recommend org-mode&nbsp;[^fn:6] , it is flexible, simple and versatile and offers something
 for everyone if you are willing to put in the work. You can read more about it on [their shiny new
 website](https://orgmode.org/).
 
-When I first started using **org-mode** my setup consisted of a relatively small portion of the what
-was possible. I took what I was comfortable with in **VimWiki** and replicated it in **org-mode** but I
+When I first started using org-mode my setup consisted of a relatively small portion of the what
+was possible. I took what I was comfortable with in VimWiki and replicated it in org-mode but I
 also started using things like `TODO` keywords, scheduling and deadlines which helped me to keep
 track of work I had to do for Uni.
 
@@ -77,45 +77,45 @@ Another feature I really liked was `org-babel` because it let me keep bits of co
 execute them, and if necessary, export them to a source file. This was a little out of my initial
 scope for what a text editor needed to be, but wasn't too far off, so I let it happen.
 
-When you use **org-mode** every day, as I did and still do, you discover new things you can do and
+When you use org-mode every day, as I did and still do, you discover new things you can do and
 if you have the same disposition as me you will start to explore these things when you get a little
 time.
-Next I want to discuss the broader topic of **Emacs** and how I started to stray from the idea of
+Next I want to discuss the broader topic of Emacs and how I started to stray from the idea of
 a text editor.
 
 
 ## EMACS Makes Any Computer Slow {#emacs-makes-any-computer-slow}
 
-There is a reason **Emacs** is more demanding than **vi** and that is because it can do so much more,
+There is a reason Emacs is more demanding than **vi** and that is because it can do so much more,
 it can become the aforementioned operating system if you make it. A few features took my fancy
 such as Email (**mu4e**) and PDF Browsing (**pdf-tools**).
 
-I had been using **mutt** and then **neomutt** for a little while before I switched to **Emacs**, so mail
-in the terminal was no stranger to me. When I switched the **Emacs** I stuck with using a dedicated
-tool for mail for a couple of months, then finally caved - the first instance of wanting **Emacs**
+I had been using **mutt** and then **neomutt** for a little while before I switched to Emacs, so mail
+in the terminal was no stranger to me. When I switched the Emacs I stuck with using a dedicated
+tool for mail for a couple of months, then finally caved - the first instance of wanting Emacs
 to do more that I had originally set out. Along comes **mu4e** which does everything **neomutt** did, it
 even uses the same tools in the background the sync mail, but it handles accounts in a cleaner
-way and I can write emails in **org-mode** so they are prettier, plus I can have images in my **emacs**
+way and I can write emails in org-mode so they are prettier, plus I can have images in my emacs
 buffers so all those modern emails don't look as bad.
 
 I felt good about my switch to **mu4e** because I had streamlined my workflow, I had removed an entire
-application from my day-to-day and replaced it with a package for **emacs**. I wanted more of this
-feeling so I started to add other little bits and pieces into my day-to-day until **Emacs** was more
+application from my day-to-day and replaced it with a package for emacs. I wanted more of this
+feeling so I started to add other little bits and pieces into my day-to-day until Emacs was more
 than I had agreed for it to be, but that was okay, I was streamlining my workflow, I felt more
-productive, I had to learn fewer specific tools, I knew **Emacs**.
+productive, I had to learn fewer specific tools, I knew Emacs.
 
-I found that, if anything, **Emacs** made my computer faster because I could switch buffers in **Emacs**
+I found that, if anything, Emacs made my computer faster because I could switch buffers in Emacs
 quicker than I could switch applications, or start a new application in Arch.
 
 
 ## Social Networking for Thoughts (`org-roam`) {#social-networking-for-thoughts--org-roam}
 
-We are now at October 2020 in my story and I am using **Emacs** for a lot of things, I refuse to
-browse the internet in **Emacs** and a few other things, but most things happen in **Emacs**. A friend,
-[@sseneca](https://ssene.ca), mentioned to me that something called `org-roam` existed, they hadn't had the chance
+We are now at October 2020 in my story and I am using Emacs for a lot of things, I refuse to
+browse the internet in Emacs and a few other things, but most things happen in Emacs. A friend,
+[@sseneca](https://ssene.ca), mentioned to me that something called `org-roam`&nbsp;[^fn:7] existed, they hadn't had the chance
 to explore it yet so I was the guinea pig and installed in on my setup.
 
-`org-roam` is an `org-mode` remake of the popular **Roam Research** tool, which employs the Zettelkasten
+`org-roam` is an `org-mode` remake of the popular **Roam Research** tool, which employs the Zettelkasten&nbsp;[^fn:8]
 method of note taking. Basically each note forms a node in the network of your knowledge, you
 can then form links between these notes and relate ideas together. Building your knowledge in
 this way makes it very easy to jump into your notes and find everything you have on a topic.
@@ -134,8 +134,8 @@ stuff I know!".
 
 ## We are all DOOM-ed {#we-are-all-doom-ed}
 
-DOOM Emacs was the next thing, Spacemacs started to feel sluggish and wasn't handling the masses
-of **org-mode** files I was accruing. So one afternoon in early October I ditched Spacemacs and said
+DOOM Emacs[^fn:9]  was the next thing, Spacemacs started to feel sluggish and wasn't handling the masses
+of org-mode files I was accruing. So one afternoon in early October I ditched Spacemacs and said
 hello to DOOM, which is faster, more barebones and still lets me use **vi** bindings and easily manage
 packages.
 
@@ -149,18 +149,19 @@ for my final year.
 ## The Agenda Rabbit Hole {#the-agenda-rabbit-hole}
 
 This is the last step before it all went wrong. I found some very well maintained dotfiles by a few
-different people. They had all adopted the **Get Things Done** way of staying organised and had really
-perfected the way they managed that in **org-mode**. One feature of **org-mode** that I hadn't really spent
-any time on was the `org-agenda` and that seemed to be a focus of the **Get Things Done** way of life.
+different people&nbsp;[^fn:10] <sup>, </sup>[^fn:11] <sup>, </sup>[^fn:12] <sup>, </sup>[^fn:12].
+They had all adopted the **Get Things Done** way of staying organised and had really
+perfected the way they managed that in org-mode. One feature of org-mode that I hadn't really spent
+any time on was the `org-agenda` and that seemed to be a focus of the **Get Things Done[^fn:13]** way of life.
 
-Another thing that came up was the ability to log your time against heading in **org-mode**, which I
+Another thing that came up was the ability to log your time against heading in org-mode, which I
 fancied doing after logging time for an internship all summer and finding it useful in terms of
 predicting what I could do in a day.
 
 So it began, I sat down on a Saturday to setup the following things:
 
 -   A tagging system
--   A file structure for my **org-mode** files
+-   A file structure for my org-mode files
 -   New **TODO** keywords and associated task flows
 -   Custom agenda views for different purposes
 -   Time clocking
@@ -175,28 +176,28 @@ perfect?
 
 I wish I understood why I feel like I do, but I don't, I can only guess and try to solve the problem
 as I always do. So my number one theory at the time of writing this is: "**emacs fatigue**" which to me
-means that I have done so much with **emacs** that whenever I can't do something with **emacs** I feel like
+means that I have done so much with emacs that whenever I can't do something with emacs I feel like
 all that work trying to make it **perfect** has been for nothing. It also means that I've run out of the
 easy wins, there aren't many more untapped sources of pristine dotfiles out there. I have started
 writing my own functions and learning `elisp`, and it means the return of my investment is diminishing.
 
 I think the trigger for all of these feelings came from the realisation I had strayed from my goal
 of keeping Emacs as a text editor and nothing more. I immediately decided that switching back to
-**vim** was the only option, and going `cold turkey` was the only way. I quickly realised how much I would
-miss **org-mode** and scurried back to the comfort of **emacs** but now with the feeling that even though
-I loved **emacs** it would never be `perfect` and there will probably never be the perfect tool for all
+vim was the only option, and going `cold turkey` was the only way. I quickly realised how much I would
+miss org-mode and scurried back to the comfort of emacs but now with the feeling that even though
+I loved emacs it would never be `perfect` and there will probably never be the perfect tool for all
 the things I do on a computer.
 
-I am too invested to just ditch **emacs** but I also know I have gone too far, but now I don't have the
-time of the energy to dig myself out of the **emacs** hole I have dug for myself. The best I can do
-is to remove the things that aren't "supposed" to be in **emacs** and hope the fatigue passes and one
-day in the future I build up the courage to streamline even further, so **emacs** will be nothing more
+I am too invested to just ditch emacs but I also know I have gone too far, but now I don't have the
+time of the energy to dig myself out of the emacs hole I have dug for myself. The best I can do
+is to remove the things that aren't "supposed" to be in emacs and hope the fatigue passes and one
+day in the future I build up the courage to streamline even further, so emacs will be nothing more
 than a note-taking tool and maybe a code editor.
 
 
 ## Closing Thoughts {#closing-thoughts}
 
-I love computers, I love Linux and I love **Emacs** but I was exposed to too much fun and exciting stuff
+I love computers, I love Linux and I love Emacs but I was exposed to too much fun and exciting stuff
 in a short period of time and now there isn't anything else for me to do. I also feel like what I
 have done isn't enough because I am a perfectionist, but I know I have really done too much.
 
@@ -208,3 +209,32 @@ longer before working **org-roam** into my day-to-day and maybe I wouldn't have 
 all.
 
 So, slow down and enjoy the things you make, or, like me, you will experience **Emacs fatigue.**
+
+
+## Updates {#updates}
+
+
+### <span class="timestamp-wrapper"><span class="timestamp">[2020-11-05 Thu] </span></span> Kicking the Fatigue {#kicking-the-fatigue}
+
+I think I have no overcome the fatigue, I am a little too busy to write a whole new post
+so I am going to briefly explain what I did in an updates section here.
+
+-   I removed most of the features I talked about as being out of scope for a text editor. I
+    can use the client in a browser or maybe setup neomutt again as and when I feel the need.
+-   I also automated my dotfiles in an Ansible playbook (it will save me time in the long run)
+    so that I am not so involved in the process of a re-install. Blog post coming soon.
+-   I took a complete break, a few days off from everything (this way probably most effective).
+
+[^fn:1]: <https://www.gnu.org/software/emacs/>
+[^fn:2]: <https://www.archlinux.org/>
+[^fn:3]: <https://vimwiki.github.io/>
+[^fn:4]: <https://www.spacemacs.org/>
+[^fn:5]: Extensible VI Layer for Emacs
+[^fn:6]: <https://orgmode.org/>
+[^fn:7]: <https://github.com/org-roam/org-roam>
+[^fn:8]: <https://en.wikipedia.org/wiki/Zettelkasten>
+[^fn:9]: <https://github.com/hlissner/doom-emacs>
+[^fn:10]: <https://github.com/jethrokuan/dots/blob/master/.doom.d/config.el>
+[^fn:11]: <https://github.com/gjstein/emacs.d>
+[^fn:12]: <https://www.lengyueyang.com/post/tools/spacemacs/lengyueyang/>
+[^fn:13]: <https://gettingthingsdone.com/>
