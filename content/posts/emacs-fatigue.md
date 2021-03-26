@@ -216,7 +216,7 @@ So, slow down and enjoy the things you make, or, like me, you will experience **
 
 ### <span class="timestamp-wrapper"><span class="timestamp">[2020-11-05 Thu] </span></span> Kicking the Fatigue {#kicking-the-fatigue}
 
-I think I have no overcome the fatigue, I am a little too busy to write a whole new post
+I think I have now overcome the fatigue, I am a little too busy to write a whole new post
 so I am going to briefly explain what I did in an updates section here.
 
 -   I removed most of the features I talked about as being out of scope for a text editor. I

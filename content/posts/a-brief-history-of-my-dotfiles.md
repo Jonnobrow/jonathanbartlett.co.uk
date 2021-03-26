@@ -82,6 +82,8 @@ should be (in my mind) on its own.
 
 ## chezmoi part 1 {#chezmoi-1}
 
+
+
 ## The Ansible Era {#the-ansible-era}
 
 During a boredom driven spiral through YouTube I stumbled across a [series of videos](https://www.youtube.com/watch?list=PL2%5FOBreMn7FqZkvMYt6ATmgC0KAGGJNAN&v=goclfp6a2IQ) by [Jeff Geerling](https://www.jeffgeerling.com/)
