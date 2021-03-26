@@ -1,4 +1,4 @@
-#+HUGO_BASE_DIR: ~/local/blog.jonnobrow.co.uk
+#+HUGO_BASE_DIR: ~/local/personal_projects/blog.jonnobrow.co.uk
 
 * DONE Emacs Fatigue
 :PROPERTIES:
@@ -210,8 +210,52 @@ so I am going to briefly explain what I did in an updates section here.
 - I also automated my dotfiles in an Ansible playbook (it will save me time in the long run)
   so that I am not so involved in the process of a re-install. Blog post coming soon.
 - I took a complete break, a few days off from everything (this way probably most effective).
+* TODO Ansible for... dotfiles?
+:PROPERTIES:
+:EXPORT_FILE_NAME: ansible-for-dotfiles
+:EXPORT_DATE: 2020-12-01
+:END:
+
+#+begin_details
+#+begin_summary
+tl;dr
+#+end_summary
+I now manage my dotfiles with an Ansible playbook. It also handles updates for my OS and Doom Emacs.
+This was inspired by [[https://www.jeffgeerling.com/][Jeff Geerling]], who authored Ansible for DevOps and Ansible for Kubernetes.
+#+end_details
+
+** Inspiration
+
+During a boredom driven spiral through YouTube I stumbled across a [[https://www.youtube.com/watch?list=PL2_OBreMn7FqZkvMYt6ATmgC0KAGGJNAN&v=goclfp6a2IQ][series of videos]] by [[https://www.jeffgeerling.com/][Jeff Geerling]]
+which go through basically everything you need to know about Ansible[fn:ansible] , especially for a hobbyist like me.
+I had heard of Ansible[fn:ansible] prior to this point but had never really taken the time to learn about it,
+and Jeff seemed like a reputable source so I started to watch.
+
+During the series he mentions at least once about [[https://github.com/geerlingguy/mac-dev-playbook][managing his personal Mac with an Ansible playbook]]. So I set
+about looking for ways to do that myself. This is when I found myself clicking through a repository by ~kespinola~ on
+Github [fn:kespinola-dotfiles]. These seemed a little more my speed as they were targeted towards linux, so I used the
+layout of his repository and copied the ~bin~ directory for the bootstrapping script (will explain more about this later).
+
+Now why do I need this? I run two machines, a desktop PC and a laptop. Typically their configurations have diverged
+and I have used something like Chezmoi[fn:chezmoi] to manage my dotfiles, with some success. However Chezmoi[fn:chezmoi] is limited
+when it comes to performing system operations, like installing packages, which I do on a regular basis when I install
+a fresh copy of Arch Linux [fn:ArchLinux] on my machines. Therefore I have historically scripted this and had Chezmoi[fn:chezmoi]
+run those scripts. The appeal of Ansible[fn:ansible] in this area is the idempotent nature of its operations, meaning
+it won't try to install stuff that's already installed, it won't copy files if they exist or, more generally, it won't
+do something it's already done.
+
+** Resources for Learning Ansible
+** My Playbook
+*** Roles
+*** Script
+*** Get my Playbook
+** Conclusions
 
 * Footnotes
+
+[fn:chezmoi] https://www.chezmoi.io/
+[fn:kespinola-dotfiles] https://github.com/kespinola/dotfiles
+[fn:ansible] https://www.ansible.com/
 [fn:gtd] https://gettingthingsdone.com/
 [fn:Dotfiles-norang] http://doc.norang.ca/org-mode.html
 [fn:Dotfiles-gjstein] https://github.com/gjstein/emacs.d
