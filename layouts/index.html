@@ -1,0 +1,35 @@
+{{ partial "head.html" . }}
+
+<main class="index">
+  <section class="article-list">
+    <h1>{{$.Title}}</h1>
+
+    {{ range (where (where .Site.RegularPages "Section" "blog") "Params.nohtml" "!=" "true") }}
+    <div class="article">
+      <span class="date">{{.Date.Format "January 2, 2006"}}</span>
+      <a href="{{.Permalink}}">{{.Title}}</a>
+    </div>
+    {{ end }}
+  </section>
+
+  <aside>
+    <div class="text-center">
+      <a class="rss" href="/blog/index.xml">rss</a>
+      ·
+      <a href="misc.html">misc</a>
+    </div>
+
+    <dl class="external-links">
+      <dt>email</dt>
+      <dd><a href="mailto:jonathan@jonnobrow.co.uk">jonathan@jonnobrow.co.uk</a></dd>
+      <dt>sourcehut</dt>
+      <dd><a href="https://sr.ht/~jonnobrow">~jonnobrow</a></dd>
+      <dt>github</dt>
+      <dd><a href="https://github.com/jonnobrow">jonnobrow</a></dd>
+      <dt>gitlab</dt>
+      <dd><a href="https://gitlab.com/jonnobrow">jonnobrow</a></dd>
+      <dt>pgp</dt>
+      <dd><a href="/publickey.txt">3BC85C121EA96233</a></dd>
+    </dl>
+  </aside>
+</main>

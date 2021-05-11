@@ -1,20 +1,17 @@
 baseURL = "https://blog.jonnobrow.co.uk"
 title = "Jonnobrow's Musings"
-theme = "etch"
-languageCode = "en-GB"
-enableInlineShortcodes = true
-pygmentsCodeFences = true
 pygmentsUseClasses = true
-
-[params]
-  description = "The meditations of a Computer Scientist, Nerd and Baker"
-  copyright = "Copyright © 2021 Jonathan Bartlett"
-  dark = "auto"
-  highlight = true
+uglyurls = true
+disablePathToLower = true
 
 [permalinks]
-  posts = "/:title/"
+blog = "/:year/:month/:day/:filename"
 
 [markup.goldmark.renderer]
-  # Allows HTML in Markdown
-  unsafe = true
+unsafe = true
+
+[markup.tableOfContents]
+ordered = true
+
+[outputs]
+section = ["HTML", "RSS"]
