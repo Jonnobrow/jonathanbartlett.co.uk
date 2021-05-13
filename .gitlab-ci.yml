@@ -1,6 +1,24 @@
 image: golang:latest
 
-before_script:
+.go-cache:
+  variables:
+    GOPATH: $CI_PROJECT_DIR/.go
+  before_script:
+    - mkdir -p .go
+  cache:
+    paths:
+      - .go/pkg/mod/
+
+pages:
+  extends: .go-cache
+
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
+  before_script:
     - git clone https://git.sr.ht/~sircmpwn/openring
     - cd openring
     - go build -o openring
@@ -10,13 +28,8 @@ before_script:
     - cd hugo
     - go build -o hugo
     - cp hugo /usr/local/bin/
+    - cd ..
 
-pages:
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
   script: 
     - |
       /usr/local/bin/openring \
