@@ -1,8 +1,56 @@
-$black: #080808;
+* {
+        --base-00: #ffffff;
+        --base-01: #c0c0c0; 
+        --base-02: #c0c0c0;
+        --base-03: #808080;
+        --base-04: #808080;
+        --base-05: #404040;
+        --base-06: #404040;
+        --base-07: #5e5e5e;
+        --base-08: #c41a15;
+        --base-09: #eb8500;
+        --base-0A: #826b28;
+        --base-0B: #007400;
+        --base-0C: #318495;
+        --base-0D: #0000ff;
+        --base-0E: #a90d91;
+        --base-0F: #826b28;
+    }
+
+@media (prefers-color-scheme: dark) {
+ * {
+    --base-00: #282828;
+    --base-01: #383838;
+    --base-02: #484848;
+    --base-03: #1d1d1d;
+    --base-04: #b8b8b8;
+    --base-05: #eeeeee;
+    --base-06: #e8e8e8;
+    --base-07: #ffffff;
+    --base-08: #f43753;
+    --base-09: #dc9656;
+    --base-0A: #ffc24b;
+    --base-0B: #c9d05c;
+    --base-0C: #73cef4;
+    --base-0D: #b3deef;
+    --base-0E: #d3b987;
+    --base-0F: #a16946;
+}   
+}
+
 
 html {
   font-family: sans-serif;
-  color: $black;
+  color: var(--base-07);
+  background: var(--base-00);
+
+  a {
+    color: var(--base-0B);
+  }
+
+  a:hover {
+    color: var(--base-0C);
+  }
 }
 
 body {
@@ -34,7 +82,7 @@ h1 {
 
     .date {
       display: block;
-      color: #333;
+      color: var(--base-05);
     }
   }
 
@@ -81,12 +129,6 @@ article {
       max-width: calc(100% - 2rem);
     }
   }
-
-  .comment {
-    margin: 2rem auto 0;
-    max-width: 80%;
-    color: #333;
-  }
 }
 
 .footnotes {
@@ -97,7 +139,7 @@ footer {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.8rem;
-  color: #333;
+  color: var(--base-06);
 }
 
 .float-img {
@@ -113,44 +155,44 @@ footer {
 }
 
 pre {
-  background-color: #eee;
+  background-color: var(--base-01);
   padding: 0.25rem 1rem;
   margin: 0 -1rem;
   max-width: 100%;
   overflow-x: auto;
 
   .cp {
-    color: #800;
+    color: var(--base-0F);
   }
 
   .k {
-    color: #008;
+    color: var(--base-0E);
   }
 
   .kt, .kd, .kc {
-    color: #44F;
+    color: var(--base-0D);
   }
 
   .s {
-    color: #484;
+    color: var(--base-0C);
     font-style: italic;
   }
 
   .cm, .c1 {
-    color: #333;
+    color: var(--base-0B);
     font-style: italic;
   }
 
   .gi {
-    color: green;
+    color: var(--base-09);
   }
 
   .gd {
-    color: red;
+    color: var(--base-08);
   }
 
   .gu {
-    color: blue;
+    color: var(--base-0B);
   }
 }
 
@@ -159,6 +201,14 @@ pre {
 
   h2 {
     font-size: 1.2rem;
+    margin: 0;
+    overflow: auto;
+  }
+
+  h2::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 
   .articles {
@@ -177,7 +227,8 @@ pre {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    background: #eee;
+    background: var(--base-00);
+    border: 3px solid var(--base-03);
     padding: 0.5rem;
 
     margin: 0 0.5rem;
@@ -201,26 +252,30 @@ pre {
   }
 
   .attribution {
-    float: right;
     font-size: 0.8rem;
-    color: #555;
-    line-height: 3;
+    color: var(--base-07);
+    line-height: 1.5;
+    float: right;
+
+    @media(max-width: 640px) {
+      margin: left;
+    }
   }
 
   .date {
-    color: black;
+    color: var(--base-06);
   }
 }
 
 summary {
   cursor: pointer;
-  background-color: #eee;
+  background-color: var(--base-00);
   padding: 0.25rem 1rem;
   margin: 0 -1rem;
 }
 
 details[open] {
-  border-bottom: 1rem solid #eee;
+  border-bottom: 1rem solid var(--base-00);
   margin: 0 -1rem 1rem;
   padding: 0 1rem;
 }
@@ -230,9 +285,9 @@ details[open] {
 }
 
 blockquote {
-  border-left: 5px solid #bbb;
-  background-color: #eee;
-  padding: 0 1rem;
+  border-left: 5px solid var(--base-0E);
+  background-color: var(--base-00);
+  padding: 0 2rem;
   margin-left: calc(-1rem - 5px);
   margin-right: -1rem;
 

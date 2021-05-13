@@ -1,19 +1,30 @@
-image: registry.gitlab.com/pages/hugo:latest
+image: golang:latest
 
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-
-test:
-  script:
-    - hugo
-  except:
-    - master
+before_script:
+    - git clone https://git.sr.ht/~sircmpwn/openring
+    - cd openring
+    - go build -o openring
+    - cp openring /usr/local/bin/
+    - cd ..
+    - git clone https://git.sr.ht/~sircmpwn/hugo
+    - cd hugo
+    - go build -o hugo
+    - cp hugo /usr/local/bin/
 
 pages:
-  script:
-    - hugo
   artifacts:
     paths:
       - public
   only:
     - master
+  script: 
+    - |
+      /usr/local/bin/openring \
+        -s https://emersion.fr/blog/rss.xml \
+        -s https://ssene.ca/atom.xml \
+        -s https://drewdevault.com/blog/index.xml \
+        < webring-in.template \
+        > layouts/partials/webring-out.html 
+    - /usr/local/bin/hugo
+
+
