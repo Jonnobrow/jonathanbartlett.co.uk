@@ -1,6 +1,17 @@
 image: golang:latest
 
+.go-cache:
+  variables:
+    GOPATH: $CI_PROJECT_DIR/.go
+  before_script:
+    - mkdir -p .go
+  cache:
+    paths:
+      - .go/pkg/mod/
+
 pages:
+  extends: .go-cache
+
   artifacts:
     paths:
       - public
@@ -15,7 +26,7 @@ pages:
     - cd ..
     - git clone https://git.sr.ht/~sircmpwn/hugo
     - cd hugo
-    - go build -o hugo
+    - CGO_ENABLED=1 go build -o hugo --tags extended
     - cp hugo /usr/local/bin/
     - cd ..
 
