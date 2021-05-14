@@ -1,0 +1,54 @@
+{{ partial "head.html" . }}
+
+<main class="index">
+  <section class="article-list">
+    <h1>
+      Posts about {{.Title}}
+      <small>
+        on
+        <span class="site"
+          ><a href="{{.Site.BaseURL}}">{{.Site.Title}}</a></span
+        >
+      </small>
+    </h1>
+
+    {{ range .Pages }}
+    <div class="article">
+      {{ if ne .Date .Lastmod }}
+      <span class="date">Updated {{.Lastmod.Format "January 2, 2006"}}</span>
+      {{ else }}
+      <span class="date">{{.Date.Format "January 2, 2006"}}</span>
+      {{ end }}
+      <a href="{{.Permalink}}">{{.Title}}</a>
+      <p class="description">{{.Description}}</p>
+    </div>
+    {{ end }}
+  </section>
+
+  <aside>
+    <h1>All Tags</h1>
+    <!-- create a list with all uppercase letters -->
+    {{ $letters := split "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+
+    <!-- range all pages sorted by their title -->
+    {{ range sort .Site.Taxonomies.tags }}
+    <!-- get the first character of each title. Assumes that the title is never empty! -->
+    {{ $firstChar := substr .Page.Title 0 1 | upper }}
+
+    <!-- in case $firstChar is a letter -->
+    {{ if $firstChar | in $letters }}
+    <!-- get the current letter -->
+    {{ $curLetter := $.Scratch.Get "curLetter" }}
+    <!-- if $curLetter isn't set or the letter has changed -->
+    {{ if ne $firstChar $curLetter }}
+    <!-- update the current letter and print it -->
+    {{ $.Scratch.Set "curLetter" $firstChar }}
+    <span class="letter">{{ $firstChar }}</span><br />
+    {{ end }}
+
+    <a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a>
+    {{ end }}
+    <br />
+    {{ end }}
+  </aside>
+</main>

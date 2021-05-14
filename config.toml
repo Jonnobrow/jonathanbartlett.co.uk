@@ -4,6 +4,9 @@ pygmentsUseClasses = true
 uglyurls = true
 disablePathToLower = true
 
+[taxonomies]
+tag = "tags"
+
 [permalinks]
 blog = "/:year/:month/:day/:filename"
 

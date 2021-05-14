@@ -4,34 +4,41 @@
   <section class="article-list">
     <h1>{{$.Title}}</h1>
 
-    {{ range (where (where .Site.RegularPages "Section" "blog") "Params.nohtml" "!=" "true") }}
+    {{ range (where .Site.RegularPages "Section" "blog") }}
     <div class="article">
-      <span class="date">{{.Date.Format "January 2, 2006"}}</span>
+      {{ if ne .Date .Lastmod }}
+        <span class="date">Updated {{.Lastmod.Format "January 2, 2006"}}</span>
+      {{ else }}
+        <span class="date">{{.Date.Format "January 2, 2006"}}</span>
+      {{ end }}
       <a href="{{.Permalink}}">{{.Title}}</a>
+      <p class="description">
+        {{.Description}}
+      </p>
     </div>
     {{ end }}
   </section>
 
   <aside>
     <div class="text-center">
-      <img src="/brand-logo.svg" alt="My Logo" width="250px"/>
+      <img class="logo" src="/brand-logo.svg" alt="Jonathan's Logo, a stylised version of his name" width="250px"/>
 
       <a class="rss" href="/blog/index.xml">rss</a>
       ·
-      <a href="misc.html">misc</a>
+      <a href="misc.html" title="Miscellaneous stuff and things">misc</a>
     </div>
 
     <dl class="external-links">
       <dt>email</dt>
-      <dd><a href="mailto:jsb@jonnobrow.co.uk">jsb@jonnobrow.co.uk</a></dd>
+      <dd><a href="mailto:jsb@jonnobrow.co.uk" title="Jonathan's Email">jsb@jonnobrow.co.uk</a></dd>
       <dt>sourcehut</dt>
-      <dd><a href="https://sr.ht/~jonnobrow">~jonnobrow</a></dd>
+      <dd><a href="https://sr.ht/~jonnobrow" title="Jonathan's Sourcehut">sr.ht/~jonnobrow</a></dd>
       <dt>github</dt>
-      <dd><a href="https://github.com/jonnobrow">jonnobrow</a></dd>
+      <dd><a href="https://github.com/jonnobrow" title="Jonathan's Github">github/jonnobrow</a></dd>
       <dt>gitlab</dt>
-      <dd><a href="https://gitlab.com/jonnobrow">jonnobrow</a></dd>
+      <dd><a href="https://gitlab.com/jonnobrow" title="Jonathan's Gitlab">gitlab/jonnobrow</a></dd>
       <dt>pgp</dt>
-      <dd><a href="/publickey.txt">3BC85C121EA96233</a></dd>
+      <dd><a href="/publickey.txt" title="Jonathan's GPG Public Key">3BC85C121EA96233</a></dd>
     </dl>
 
     Hi, I'm Jonathan and I like all things DevOps, Open-Source and Tech in general. I also like

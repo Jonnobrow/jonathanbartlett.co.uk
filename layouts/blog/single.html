@@ -7,14 +7,25 @@
     on
     <span class="site"><a href="{{.Site.BaseURL}}">{{.Site.Title}}</a></span>
   </small>
+  {{ if ne .Date .Lastmod }}
+  <small>
+    Updated on
+    <span class="date">{{.Lastmod.Format "January 2, 2006"}}</span>
+  </small>
+  {{ end }}
+  <small>
+    {{ $taxo := "tags" }}
+    {{ with .Param $taxo }}
+    <strong>Tag{{ if gt (len .) 1 }}s{{ end }}:</strong>
+    {{ range $index, $tag := . }} {{- if gt $index 0 }}, {{ end -}} {{ with
+    $.Site.GetPage (printf "/%s/%s" $taxo $tag) -}}
+    <a href="{{ .Permalink }}">{{ $tag }}</a>
+    {{- end -}} {{- end -}} {{ end }}
+    </small>
 </h1>
 
 <main>
-  <article>
-    {{.Content}}
-  </article>
+      <article>{{.Content}}</article>
 </main>
 
-{{ partial "webring-out.html" }}
-
-{{ partial "foot.html" }}
+{{ partial "webring-out.html" }} {{ partial "foot.html" }}

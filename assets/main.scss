@@ -78,6 +78,11 @@ h1 {
 
     .article {
       margin-bottom: 1rem;
+
+        .description {
+            max-width: 400px;
+            margin: 0.25rem 0;
+        }
     }
 
     .date {
@@ -109,8 +114,23 @@ h1 {
   }
 
   @media(max-width: 640px) {
+    flex-direction: column;
     aside {
-      display: none;
+      width: 100%;
+      border-top: 3px solid var(--base-07);
+      padding: 1rem 0;
+
+      .external-links {
+        grid-template-columns: auto auto;
+
+        dt {
+            text-align: right;
+        }
+      }
+
+      .logo {
+        display: none;
+      }
     }
   }
 }
@@ -155,7 +175,7 @@ footer {
 }
 
 pre {
-  background-color: var(--base-01);
+  background-color: var(--base-00);
   padding: 0.25rem 1rem;
   margin: 0 -1rem;
   max-width: 100%;
@@ -236,6 +256,7 @@ pre {
     @media(max-width: 640px) {
       margin: 0.5rem 0;
     }
+
   }
 
   .article:first-child {

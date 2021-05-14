@@ -1,11 +1,11 @@
----
-title: Emacs Fatigue
-author: Jonathan Bartlett
-date: 2020-10-28
-slug: emacs-fatigue
-description: A post about my path to Emacs, and the reasons I might abandon it someday
-published: true
----
++++
+title = "Emacs Fatigue"
+date = "2020-10-28"
+lastmod = "2021-03-15"
+description = "The things I love and loathe about Emacs and the reasons I may abandon the \"editor\" altogether one day 😦"
+published = true
+tags = ["emacs", "editors"]
++++
 
 As users of Emacs[^fn:1] and Arch linux[^fn:2] will be aware, you can't simply perfect your setup.
 There is almost always something that needs tweaking, or something new a like-minded
@@ -216,7 +216,7 @@ So, slow down and enjoy the things you make, or, like me, you will experience **
 ## Updates 
 
 
-### <span class="timestamp-wrapper"><span class="timestamp">[2020-11-05 Thu] </span></span> Kicking the Fatigue 
+### Kicking the Fatigue (2020-11-05)
 
 I think I have now overcome the fatigue, I am a little too busy to write a whole new post
 so I am going to briefly explain what I did in an updates section here.
@@ -226,6 +226,11 @@ so I am going to briefly explain what I did in an updates section here.
 -   I also automated my dotfiles in an Ansible playbook (it will save me time in the long run)
     so that I am not so involved in the process of a re-install. Blog post coming soon.
 -   I took a complete break, a few days off from everything (this way probably most effective).
+
+### I quit! (2021-03-15)
+
+Emacs is a thing of the past for me. It just got too complicated and tried to do too much. Back to
+simple tools that do one thing well!
 
 [^fn:1]: <https://www.gnu.org/software/emacs/>
 [^fn:2]: <https://www.archlinux.org/>
