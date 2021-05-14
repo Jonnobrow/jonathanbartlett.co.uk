@@ -1,5 +1,5 @@
-baseURL = "https://blog.jonnobrow.co.uk"
-title = "Jonnobrow's Musings"
+baseURL = "https://jonathanbartlett.co.uk"
+title = "Jonathan Bartlett's Musings"
 pygmentsUseClasses = true
 uglyurls = true
 disablePathToLower = true
