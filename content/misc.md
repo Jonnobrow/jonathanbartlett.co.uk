@@ -1,7 +1,7 @@
----
-title: Miscellaneous Stuff and Things
-layout: page
----
++++
+title = "Miscellaneous Stuff and Things"
+layout = "page"
++++
 
 There isn't much to see here.
 

@@ -1,20 +1,11 @@
 {{ partial "head.html" . }}
-<main class="index">
-  <section class="article-list">
-    <h1>{{$.Title}}</h1>
 
-    {{ range .Pages }}
-    <div class="article">
-      {{ if ne .Date .Lastmod }}
-        <span class="date">Updated {{.Lastmod.Format "January 2, 2006"}}</span>
-      {{ else }}
-        <span class="date">{{.Date.Format "January 2, 2006"}}</span>
-      {{ end }}
-      <a href="{{.Permalink}}">{{.Title}}</a>
-      <p class="description">
-        {{.Description}}
-      </p>
-    </div>
-    {{ end }}
-  </section>
+<h1>
+  {{$.Title}}
+</h1>
+
+<main>
+  {{.Content}}
 </main>
+
+{{ partial "foot.html" }}
