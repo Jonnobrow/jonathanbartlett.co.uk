@@ -83,7 +83,23 @@ This scaling can be achieved by using the cloud[^fn:2].
 
 ### Project Management
 
+I followed the agile development methodology as I used this in my
+industry placements and had seen how effective it was.
+I created an initial backlog on tasks and then created a rough plan for
+each sprint (a block of work, in my case lasting 2 weeks). After each
+two week period I reflected on my progress and then updated the plan for
+the next sprint accordingly. This allowed me to adapt to any issues and
+change my focus easily without large knock-on effects.
+
 ### Design 
+
+For the machine learning component, the design was based almost entirely on
+my background research. I chose to adapt an existing algorithm to the
+scope of my project and this proved to be a reasonably effective strategy
+and saved a considerable amount of time. 
+
+The design for the analysis pipeline was my own, inspired by my limited
+experience with scaleable systems and by the objectives of the project.
 
 ### Implementation
 

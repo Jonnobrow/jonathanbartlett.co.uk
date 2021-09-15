@@ -4,6 +4,9 @@ date = "2021-05-18"
 description= "The beginnings of my homelab"
 toc = true
 tags = ["homelab", "devops", "self-hosting"]
+[series] 
+    name = "homelab"
+    number = 1
 +++
 
 Now that I have finished university I have nearly 5 months of 

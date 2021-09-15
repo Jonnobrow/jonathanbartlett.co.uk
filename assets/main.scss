@@ -351,3 +351,24 @@ dl {
     border-color: #bee5eb;
   }
 }
+
+.related {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media(max-width: 640px) {
+    flex-direction: column;
+  }
+
+  span {
+    flex: 1 1 0;
+    &:nth-child(2) {
+        text-align: right;
+    }
+  }
+
+  
+}

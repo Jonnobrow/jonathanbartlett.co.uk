@@ -4,6 +4,9 @@ date = "2021-09-02"
 description= "An Update on my Homelab"
 toc = true
 tags = ["homelab", "devops", "self-hosting"]
+[series] 
+    name = "homelab"
+    number = 2
 +++
 
 Since [my previous post]({{< ref "/blog/homelab-part-1" >}}) I have

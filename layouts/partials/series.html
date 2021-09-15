@@ -1,0 +1,27 @@
+{{ if isset .Params "series" }}
+<section id="related">
+    {{$related := where .Site.AllPages ".Params.series.name" "eq" .Params.series.name }}
+    <div class="related">
+    {{ range first 1 (where $related ".Params.series.number" "eq" (sub .Params.series.number 1)) }}
+        <span>
+        <a href="{{ .Permalink }}">
+            &lt;&lt;&lt;
+            {{.Title}}
+        </a>
+        </span>
+    {{ else }}
+    <span></span>
+    {{ end }}
+    {{ range first 1 (where $related ".Params.series.number" "eq" (add .Params.series.number 1)) }}
+        <span>
+        <a href="{{ .Permalink }}">
+            {{.Title}}
+            &gt;&gt;&gt;
+        </a>
+        </span>
+    {{ else }}
+    <span></span>
+    {{ end }}
+    </div>
+</section>
+{{ end }}
