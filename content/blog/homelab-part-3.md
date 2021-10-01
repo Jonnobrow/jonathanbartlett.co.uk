@@ -4,7 +4,6 @@ date = "2021-09-30"
 description= "A slightly deeper dive into my backup strategy"
 toc = true
 tags = ["homelab", "devops", "self-hosting", "backups"]
-draft = true
 [series]
     name = "homelab"
     number = 3
