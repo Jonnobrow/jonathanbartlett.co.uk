@@ -13,6 +13,9 @@ blog = "/:year/:month/:day/:filename"
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.goldmark.extensions]
+footnote = true
+
 [markup.tableOfContents]
 ordered = true
 endLevel = 3
