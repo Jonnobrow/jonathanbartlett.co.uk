@@ -6,7 +6,7 @@
         <span>
         <a href="{{ .Permalink }}">
             &lt;&lt;&lt;
-            {{.Title}}
+            {{ .Title | truncate 20 }}
         </a>
         </span>
     {{ else }}
@@ -15,7 +15,7 @@
     {{ range first 1 (where $related ".Params.series.number" "eq" (add .Params.series.number 1)) }}
         <span>
         <a href="{{ .Permalink }}">
-            {{.Title}}
+            {{.Title | truncate 20 }}
             &gt;&gt;&gt;
         </a>
         </span>

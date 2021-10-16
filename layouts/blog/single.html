@@ -25,6 +25,10 @@
 </h1>
 {{ partial "series.html" . }}
 
+<div class="contents">
+          <h2>Contents</h2>
+          {{ .TableOfContents }}
+</div>
 <main class="blog">
       <article>{{.Content}}</article>
 </main>
