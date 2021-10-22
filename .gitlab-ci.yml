@@ -16,7 +16,7 @@ pages:
     paths:
       - public
   only:
-    - master
+    - main
 
   before_script:
     - git clone https://git.sr.ht/~sircmpwn/openring
