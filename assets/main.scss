@@ -401,3 +401,7 @@ dl {
   display: grid;
   grid-template-columns: auto auto auto;
 }
+
+.hovertext {
+  border-bottom: 1px dotted var(--base-0B);
+}

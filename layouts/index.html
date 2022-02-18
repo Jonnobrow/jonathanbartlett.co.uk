@@ -12,7 +12,7 @@
       <span class="date">{{.Date.Format "January 2, 2006"}}</span>
       {{ end }}
       <a href="{{.Permalink}}">{{.Title}}</a>
-      <p class="description">{{.Description | .RenderString }}</p>
+      <p class="description">{{.Description}}</p>
     </div>
     {{ end }}
   </section>
@@ -29,6 +29,8 @@
       <a class="rss" href="/blog/index.xml">rss</a>
       ·
       <a href="misc.html" title="Miscellaneous stuff and things">misc</a>
+      .
+      <a href="recommendations.html" title="Recommendations">recs</a>
     </div>
 
     <dl class="external-links">
@@ -64,11 +66,12 @@
       </dd>
     </dl>
 
-    Hi, I'm Jonathan 😃. I'm a DevOps Engineer by day and a hobbyist homelabber
-    by night. I also like cooking, live music and plants. This is my blog which
-    is mainly about my homelab with a sprinkle of the other stuff to keep it
-    varied.
-    <br /><br />
+    Hi, I'm Jonathan 😃. I'm a
+    <span class="hovertext" title="Site Reliability Engineer">SRE</span>
+    by day and a homelabber/open-source-contributer by night. I also love
+    cooking, baking, live music and plants. <br /><br />
+    You've found my blog which is mainly about my homelab with a sprinkle of the
+    other stuff to keep it varied. <br /><br />
     I look forward to meeting you.
   </aside>
 </main>
