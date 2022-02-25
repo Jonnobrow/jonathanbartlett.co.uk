@@ -14,23 +14,22 @@
   </small>
   {{ end }}
   <small>
-    {{ $taxo := "tags" }}
-    {{ with .Param $taxo }}
+    {{ $taxo := "tags" }} {{ with .Param $taxo }}
     <strong>Tag{{ if gt (len .) 1 }}s{{ end }}:</strong>
     {{ range $index, $tag := . }} {{- if gt $index 0 }}, {{ end -}} {{ with
     $.Site.GetPage (printf "/%s/%s" $taxo $tag) -}}
     <a href="{{ .Permalink }}">{{ $tag }}</a>
     {{- end -}} {{- end -}} {{ end }}
-    </small>
+  </small>
 </h1>
 {{ partial "series.html" . }}
 
 <div class="contents">
-          <h2>Contents</h2>
-          {{ .TableOfContents }}
+  <h2>Contents</h2>
+  {{ .TableOfContents }}
 </div>
 <main class="blog">
-      <article>{{.Content}}</article>
+  <article>{{.Content}}</article>
 </main>
 
 {{ partial "webring-out.html" }} {{ partial "foot.html" }}

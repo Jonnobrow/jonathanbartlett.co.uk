@@ -4,19 +4,19 @@ date = "2021-05-18"
 description= "The beginnings of my homelab"
 toc = true
 tags = ["homelab", "devops", "self-hosting"]
-[series] 
+[series]
     name = "homelab"
     number = 1
 +++
 
-Now that I have finished university I have nearly 5 months of 
+Now that I have finished university I have nearly 5 months of
 unemployment ahead of me before I start my graduate role at Sky.
 Therefore I need a project to keep my entertained. I have a huge list
 of things to get done, some of which will end up immortalised as blog
 posts on here. However, if you are reading this you are probably here
 to hear about the beginnings of my Homelab.
 
-## What is a Homelab 
+## What is a Homelab
 
 **r/homelab** provides the following definition[^fn:1]:
 
@@ -24,6 +24,7 @@ to hear about the beginnings of my Homelab.
 > awesome in the domicile
 
 So essentially, it is some hardware that you set up a home in order to:
+
 1. Experiment with "enterprise" kit in your home
 2. Learn about network infrastructure
 3. Self-host your own apps and services
@@ -34,9 +35,9 @@ my degree has taught me about the underlying infrastructure, therefore
 its mainly the benefits of self-hosting and the DevOps experience I get
 along the way that I am interested in.
 
-*So to quickly summarise, a homelab is some tech you have at home that
+_So to quickly summarise, a homelab is some tech you have at home that
 you can play around with, learn about and have fun with all at the same
-time.*
+time._
 
 ### The benefits of self-hosting
 
@@ -44,7 +45,7 @@ time.*
   aren't giving your memories to Google or relying on Spotify and
   Netflix to have the music and tv you want to watch.
 - **You learn a lot**. Setting up some of this stuff isn't easy and
-  isn't for beginners (there is a lot that is though) and it *can* be a
+  isn't for beginners (there is a lot that is though) and it _can_ be a
   bit of a steep learning curve. However the community is great and will
   probably help you if you ask 😜
 - **You can make it your own**. This may seem obvious, it may not, but
@@ -66,7 +67,8 @@ quite limited in what I can do, but its a great place to start if you
 aren't sure it's for you, or if you can't afford to build or buy a
 server.
 
-My *credentials* in the Homelabbing space are:
+My _credentials_ in the Homelabbing space are:
+
 - Self-hosted Nextcloud[^fn:4], Minecraft, Jellyfin[^fn:5] (Just for me
   on a RPi)
 - Deployed K8s[^fn:6] clusters the hard way[^fn:3] and with various scripts
@@ -84,17 +86,17 @@ Part 1 and not Homelab - Part x.
 
 I wish I could tell you my home network was dreamy with gigabit fibre
 broadband, high quality switches and access points, ethernet everywhere
-and all the bells and whistles. 
+and all the bells and whistles.
 
 However, the real state of my network is dire. I am a student still
 (technically) when writing this and I live in a flat, which I rent,
 therefore my ability to install ethernet, access points and the rest
-is limited. 
+is limited.
 
 I also had the misfortune of falling in love with a flat that receives
 a maximum of 10Mbps download and 1Mbps upload speed.
 
-![My abismal speedtest](speedtest.png)
+![My abismal speedtest](/speedtest.png)
 
 My home network actual consists of a Sky Hub with a single 25m ethernet
 cable clipped to the skirting board all the way to the office. In there
@@ -115,7 +117,7 @@ of cost (both initial and ongoing, descending):
 1. The first is to buy enterprise grade kit second or third hand from
    somewhere like eBay and deal with the incessant whining of high rpm
    fans and the power bill that will kill your WAF[^fn:7].
-2. *(My choice)* Buy components, either new or used, and build a server
+2. _(My choice)_ Buy components, either new or used, and build a server
    PC yourself.
 3. Buy some kit like Raspberry Pis and have a play since
    they are cheap and low power. One day you might even get to a crazy
@@ -134,7 +136,7 @@ process.
 ### The Parts
 
 | Part Type       | Part Choice                           | Rationale                              |
-|-----------------|---------------------------------------|----------------------------------------|
+| --------------- | ------------------------------------- | -------------------------------------- |
 | **CPU**         | Ryzen 3600                            | 65W TDP and 12 Threads                 |
 | **Memory**      | 16GB DDR4 3200Mhz (KLEVV BOLT X)      | 16GB seems like the minimum these days |
 | **Storage**     | 500GB WD Blue SSD (For now)           | Boot Drive and VM/OS Storage           |
@@ -183,6 +185,7 @@ machines for them all. It is also a great technology to learn in 2021.
 ### Utilities and Services for Internal Use
 
 **High Priority**:
+
 - NGINX Proxy[^fn:17]: Access to services
 - Wireguard[^fn:22]: Remote access to home network
 - Prometheus[^fn:13]: Monitoring
@@ -190,6 +193,7 @@ machines for them all. It is also a great technology to learn in 2021.
 - Syncthing[^fn:20]: File synchronisation between devices
 
 **Nice to Have**:
+
 - Transmission[^fn:23]: BitTorrent client
 - Sonarr[^fn:11]: TV Show Management
 - Radarr[^fn:11]: Movie Management
@@ -200,17 +204,20 @@ machines for them all. It is also a great technology to learn in 2021.
 ### Services for External Use
 
 **High Priority**:
+
 - Jellyfin[^fn:5]: Movies, TV, Music
 - Nextcloud[^fn:4]
 - Tiny Tiny RSS[^fn:19]: RSS Aggregator
 - My Personal Website
 
 **Medium Priority**:
+
 - Photos: Photoprism (Synced with Nextcloud)
 - Prosody IM[^fn:15]: XMPP
 - Paperless-ng: Document manager
 
 **Nice to Have**:
+
 - Recipe Sage[^fn:16]: Recipe management and food planner
 - Sourcehut[^fn:18]: Software Development
 
@@ -227,14 +234,18 @@ Core and pfsense, but thats a while away yet.
 Subscribe to my RSS feed so you don't miss Homelab - Part 2.
 
 [^fn:1]: <https://www.reddit.com/r/homelab/wiki/introduction>
-[^fn:2]: Free as in freedom. Free Software gives everybody the rights to
-  use, understand, adapt and share software. <https://fsfe.org/>
+[^fn:2]:
+    Free as in freedom. Free Software gives everybody the rights to
+    use, understand, adapt and share software. <https://fsfe.org/>
+
 [^fn:3]: <https://github.com/kelseyhightower/kubernetes-the-hard-way>
 [^fn:4]: <https://nextcloud.com/>
 [^fn:5]: <https://jellyfin.org/>
 [^fn:6]: K8s == Kubernetes <https://kubernetes.io/>
-[^fn:7]: Wife Acceptance Factor <https://openhomelab.org/index.php/WAF>
-  or <https://en.wikipedia.org/wiki/Wife_acceptance_factor>
+[^fn:7]:
+    Wife Acceptance Factor <https://openhomelab.org/index.php/WAF>
+    or <https://en.wikipedia.org/wiki/Wife_acceptance_factor>
+
 [^fn:8]: <https://www.reddit.com/r/homelab/comments/jqh6m8/raspberry_pi_k8s_cluster>
 [^fn:9]: <https://pve.proxmox.com/wiki/Main_Page>
 [^fn:10]: <https://www.gnu.org/licenses/agpl-3.0.en.html>

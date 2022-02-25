@@ -374,3 +374,30 @@ dl {
     }
   }
 }
+
+.daterange {
+  padding: 0;
+  color: var(--base-0B);
+  margin: -1em 0 1em 0;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.icon {
+  img {
+    max-width: 8rem;
+    max-height: 8rem;
+  }
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.arbi-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
