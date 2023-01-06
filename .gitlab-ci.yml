@@ -34,7 +34,6 @@ pages:
     - |
       /usr/local/bin/openring \
         -s https://emersion.fr/blog/rss.xml \
-        -s https://ssene.ca/atom.xml \
         -s https://drewdevault.com/blog/index.xml \
         < webring-in.template \
         > layouts/partials/webring-out.html 
